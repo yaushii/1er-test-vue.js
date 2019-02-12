@@ -4,8 +4,11 @@
     <input type="text" v-model="promotion.name">
     <div> {{ promotion.id }}
       - Début: {{ promotion.startDate }}
-      - Fin: {{ promotion.endDate }}</div>
-      <Student v-for="studentURL in promotion.students"></Student>
+      - Fin: {{ promotion.endDate }}</div><br>
+      <Student 
+      v-for="(studentURL, index) in promotion.students" 
+      v-bind:myURL="studentURL" 
+      v-bink:key="index"></Student>
     
   </div>
 </template>
